@@ -12,7 +12,7 @@ import WebKit
 import Firebase
 import FirebaseStorage
 
-class topicsLandingPageViewController: UITableViewController {
+class topicsLandingPageViewController: UIViewController {
      
         var value = ""
         
