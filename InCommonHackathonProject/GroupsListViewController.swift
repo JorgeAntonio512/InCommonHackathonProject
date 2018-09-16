@@ -17,20 +17,57 @@ class GroupsListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
         
+        let userDict = self.usersArray[indexPath.row]
+        
+        cell.textLabel?.text = userDict["topic"] as? String
+        return cell
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        <#code#>
+        let codde = 5
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let dict = self.usersArray[indexPath.row]
+        
+        topic = dict["topic"] as? String
+        
+                self.performSegue(withIdentifier: "toPeoplesProfiles", sender: self)
+                
+            }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "toPeoplesProfiles") {
+            let vc = segue.destination as! topicsLandingPageViewController
+            vc.value = topic!
+            
+        }
+    }
+    
     
      var usersArray = [ [String: Any] ]()
     @IBOutlet var groupsList:UITableView!
+    var topic:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Topics"
         // Do any additional setup after loading the view, typically from a nib.
-         let ref = Database.database().reference().child("groups").child("topics")
+        
+        groupsList.delegate = self
+        groupsList.dataSource = self
+        
+        definesPresentationContext = true
+        //tableView.tableHeaderView = searchController.searchBar
+        
+        self.groupsList.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        
+         let ref = Database.database().reference().child("groups")//.child("topic")
         
         ref.observeSingleEvent(of: .value, with: { snapshot in
             
@@ -41,7 +78,7 @@ class GroupsListViewController: UIViewController, UITableViewDelegate, UITableVi
                 
                 
                 for child in (snapshot.children) {
-                    
+                    print("you are here..")
                     let snap = child as! DataSnapshot //each child is a snapshot
                     
                     let dict = snap.value as? [String:AnyObject] // the value is a dict
@@ -49,9 +86,9 @@ class GroupsListViewController: UIViewController, UITableViewDelegate, UITableVi
                     let key = snap.key
                     self.usersArray.append(dict!)
                     print(self.usersArray)
-                    self.keyArray.append(key)
+                    print("hi there :)")
                 }
-                self.tableView.reloadData()
+                self.groupsList.reloadData()
             }
         })
     }

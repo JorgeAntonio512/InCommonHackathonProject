@@ -16,7 +16,7 @@ class GroupsLandingPageViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let floaty = Floaty()
-        floaty.addItem("Create new group", icon: UIImage(named: "download")!, handler: { item in
+        floaty.addItem("Create new topic", icon: UIImage(named: "download")!, handler: { item in
             self.performSegue(withIdentifier: "toCreate", sender: nil)
             floaty.close()
         })

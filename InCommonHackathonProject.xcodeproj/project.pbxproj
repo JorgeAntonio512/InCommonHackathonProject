@@ -20,6 +20,7 @@
 		3D9B991C214E527A00AE2EEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D9B991B214E527A00AE2EEF /* GoogleService-Info.plist */; };
 		3D9B991E214E7F6D00AE2EEF /* createAgroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B991D214E7F6D00AE2EEF /* createAgroupViewController.swift */; };
 		3D9B9920214E856000AE2EEF /* GroupsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B991F214E856000AE2EEF /* GroupsListViewController.swift */; };
+		3D9B9922214E9F5700AE2EEF /* topicsLandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B9921214E9F5700AE2EEF /* topicsLandingPageViewController.swift */; };
 		7D5DF2793F3FD660C451AB10 /* Pods_InCommonHackathonProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CF2078241DF95836F536BE /* Pods_InCommonHackathonProject.framework */; };
 		832324C7C91A280CDB8B2CF3 /* Pods_InCommonHackathonProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A61B4A73F2F8CC7EBAB665FD /* Pods_InCommonHackathonProjectTests.framework */; };
 		949626152D3C0B42C7A6B680 /* Pods_InCommonHackathonProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00DA052754353E7A1EF6A00 /* Pods_InCommonHackathonProjectUITests.framework */; };
@@ -65,6 +66,7 @@
 		3D9B991B214E527A00AE2EEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D9B991D214E7F6D00AE2EEF /* createAgroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createAgroupViewController.swift; sourceTree = "<group>"; };
 		3D9B991F214E856000AE2EEF /* GroupsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsListViewController.swift; sourceTree = "<group>"; };
+		3D9B9921214E9F5700AE2EEF /* topicsLandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topicsLandingPageViewController.swift; sourceTree = "<group>"; };
 		70CF2078241DF95836F536BE /* Pods_InCommonHackathonProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InCommonHackathonProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABB40F0880278C994E1ED51 /* Pods-InCommonHackathonProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InCommonHackathonProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InCommonHackathonProjectTests/Pods-InCommonHackathonProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A61B4A73F2F8CC7EBAB665FD /* Pods_InCommonHackathonProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InCommonHackathonProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 				3D9B9919214E4D9B00AE2EEF /* GroupsLandingPageViewController.swift */,
 				3D9B991D214E7F6D00AE2EEF /* createAgroupViewController.swift */,
 				3D9B991F214E856000AE2EEF /* GroupsListViewController.swift */,
+				3D9B9921214E9F5700AE2EEF /* topicsLandingPageViewController.swift */,
 				3D454F34214D793B0060A5AB /* Main.storyboard */,
 				3D9B991B214E527A00AE2EEF /* GoogleService-Info.plist */,
 				3D454F37214D793C0060A5AB /* Assets.xcassets */,
@@ -412,6 +415,7 @@
 				3D9B991E214E7F6D00AE2EEF /* createAgroupViewController.swift in Sources */,
 				3D454F2F214D793B0060A5AB /* AppDelegate.swift in Sources */,
 				3D454F31214D793B0060A5AB /* loginViewController.swift in Sources */,
+				3D9B9922214E9F5700AE2EEF /* topicsLandingPageViewController.swift in Sources */,
 				3D454F5F214D842D0060A5AB /* landingPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
