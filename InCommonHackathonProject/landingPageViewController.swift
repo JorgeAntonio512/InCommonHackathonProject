@@ -13,12 +13,23 @@ class landingPageViewController: UIViewController {
     
     @IBOutlet var visitOur: UIImageView!
     
+    @IBOutlet var loginBtn: UIView!
+    @IBOutlet var createActBtn: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(linkTapped(sender:)))
         self.visitOur.addGestureRecognizer(tapGestureRecognizer)
+        self.visitOur.isUserInteractionEnabled = true
+        
+        let loginBtntapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(loginBtnTapped(sender:)))
+        self.visitOur.addGestureRecognizer(loginBtntapGestureRecognizer)
+        self.visitOur.isUserInteractionEnabled = true
+        
+        let createActBtntapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(createActBtnTapped(sender:)))
+        self.visitOur.addGestureRecognizer(createActBtntapGestureRecognizer)
         self.visitOur.isUserInteractionEnabled = true
     }
     
@@ -37,5 +48,17 @@ class landingPageViewController: UIViewController {
             UIApplication.shared.openURL(url as URL)
         }
     }
+    
+    @IBAction func loginBtnTapped(sender:UITapGestureRecognizer) {
+        
+        
+    }
+    
+    @IBAction func createActBtnTapped(sender:UITapGestureRecognizer) {
+        
+        
+    }
+    
+    
     
 }

@@ -115,7 +115,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7d7-QJ-UzO" customClass="LGButton" customModule="LGButton">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7d7-QJ-UzO" customClass="LGButton" customModule="LGButton">
                                 <rect key="frame" x="67" y="405" width="240" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,7 +142,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hw2-fa-g2w" customClass="LGButton" customModule="LGButton">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hw2-fa-g2w" customClass="LGButton" customModule="LGButton">
                                 <rect key="frame" x="90" y="528" width="194" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -166,6 +166,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Y6B-a2-tnU"/>
                     <connections>
+                        <outlet property="createActBtn" destination="hw2-fa-g2w" id="c54-O9-f1e"/>
+                        <outlet property="loginBtn" destination="7d7-QJ-UzO" id="WbU-vB-fEo"/>
                         <outlet property="visitOur" destination="THt-zo-3Aa" id="INg-na-g8N"/>
                     </connections>
                 </viewController>
