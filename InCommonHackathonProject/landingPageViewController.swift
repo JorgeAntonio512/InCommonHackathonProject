@@ -25,12 +25,12 @@ class landingPageViewController: UIViewController {
         self.visitOur.isUserInteractionEnabled = true
         
         let loginBtntapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(loginBtnTapped(sender:)))
-        self.visitOur.addGestureRecognizer(loginBtntapGestureRecognizer)
-        self.visitOur.isUserInteractionEnabled = true
+        self.loginBtn.addGestureRecognizer(loginBtntapGestureRecognizer)
+        self.loginBtn.isUserInteractionEnabled = true
         
         let createActBtntapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(createActBtnTapped(sender:)))
-        self.visitOur.addGestureRecognizer(createActBtntapGestureRecognizer)
-        self.visitOur.isUserInteractionEnabled = true
+        self.createActBtn.addGestureRecognizer(createActBtntapGestureRecognizer)
+        self.createActBtn.isUserInteractionEnabled = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,14 +50,15 @@ class landingPageViewController: UIViewController {
     }
     
     @IBAction func loginBtnTapped(sender:UITapGestureRecognizer) {
-        
-        
+        self.performSegue(withIdentifier: "loginBtnPressed", sender: nil)
+        print("this is no fun when it doesn't work")
     }
     
     @IBAction func createActBtnTapped(sender:UITapGestureRecognizer) {
-        
+        self.performSegue(withIdentifier: "createActBtnPressed", sender: nil)
         
     }
+   
     
     
     
