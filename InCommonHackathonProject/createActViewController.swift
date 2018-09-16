@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  InCommonHackathonProject
 //
 //  Created by George Pazdral (work) on 9/15/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class createActViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

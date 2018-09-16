@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  InCommonHackathonProject
 //
 //  Created by George Pazdral (work) on 9/15/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class loginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
