@@ -8,12 +8,19 @@
 
 import Foundation
 import UIKit
+import Floaty
 
 class GroupsLandingPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let floaty = Floaty()
+        floaty.addItem("Create new group", icon: UIImage(named: "download")!, handler: { item in
+            self.performSegue(withIdentifier: "toCreate", sender: nil)
+            floaty.close()
+        })
+        self.view.addSubview(floaty)
     }
     
     override func didReceiveMemoryWarning() {

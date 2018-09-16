@@ -7,6 +7,7 @@ target 'InCommonHackathonProject' do
 
   # Pods for InCommonHackathonProject
 pod 'LGButton'
+pod "Floaty", "~> 4.0.0"
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'

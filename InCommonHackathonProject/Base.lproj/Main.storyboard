@@ -173,7 +173,7 @@
                         <outlet property="emailField" destination="kT3-YE-fQL" id="ld6-8W-Mad"/>
                         <outlet property="loginBttn" destination="D43-yA-VWV" id="o3l-j2-wqf"/>
                         <outlet property="passwordField" destination="Wc3-0x-6Dv" id="ILm-1G-cCF"/>
-                        <segue destination="8Mk-tp-p2r" kind="show" id="5Ti-US-Q8b"/>
+                        <segue destination="8Mk-tp-p2r" kind="show" identifier="fromLoginToGroups" id="5Ti-US-Q8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K44-IP-Sja" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,14 +245,14 @@
                         <outlet property="email" destination="DwO-dL-kSz" id="8N7-IH-Pmr"/>
                         <outlet property="password" destination="KQF-26-8eD" id="ZYz-mB-ht9"/>
                         <outlet property="username" destination="AbM-d3-5Yf" id="Lh7-WJ-5Ea"/>
-                        <segue destination="8Mk-tp-p2r" kind="show" id="mSs-tX-70f"/>
+                        <segue destination="8Mk-tp-p2r" kind="show" identifier="fromCreateToGroups" id="mSs-tX-70f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hjg-Qp-2vr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-200.80000000000001" y="-933.28335832083962"/>
         </scene>
-        <!--Groups Landing Page View Controller-->
+        <!--Groups-->
         <scene sceneID="HCR-dw-ENM">
             <objects>
                 <viewController id="8Mk-tp-p2r" customClass="GroupsLandingPageViewController" customModule="InCommonHackathonProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -280,13 +280,64 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nyX-iS-yad"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Groups" id="3Bz-6x-skj"/>
                     <connections>
-                        <outlet property="tableView" destination="hDH-F0-WFR" id="6bs-Ni-1SE"/>
+                        <segue destination="iuT-dA-Kxi" kind="show" identifier="toCreate" id="3b9-qD-HsY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0r-Zh-3jL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-998" y="122"/>
+        </scene>
+        <!--Create Agroup View Controller-->
+        <scene sceneID="dWn-nE-FU2">
+            <objects>
+                <viewController id="iuT-dA-Kxi" customClass="createAgroupViewController" customModule="InCommonHackathonProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jMq-Lf-ShU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Create a Group" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yuH-KY-BSZ">
+                                <rect key="frame" x="16" y="97" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kse-Wb-Ywz" customClass="LGButton" customModule="LGButton">
+                                <rect key="frame" x="67" y="403" width="240" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Go!"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleFontSize">
+                                        <real key="value" value="26"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.096451513469219208" green="0.72419816255569458" blue="0.42306289076805115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose a topic!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eoL-e5-zKP">
+                                <rect key="frame" x="56" y="280" width="262" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="etL-E3-e0W"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonzForDayz" destination="Kse-Wb-Ywz" id="0Es-J0-MZk"/>
+                        <outlet property="chooseAtopic" destination="eoL-e5-zKP" id="j0s-sI-vx0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p92-Wd-ltM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325.60000000000002" y="340.47976011994007"/>
         </scene>
     </scenes>
     <resources>
@@ -296,6 +347,6 @@
         <image name="visitOurWebsite" width="1040" height="1035"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Ti-US-Q8b"/>
+        <segue reference="mSs-tX-70f"/>
     </inferredMetricsTieBreakers>
 </document>

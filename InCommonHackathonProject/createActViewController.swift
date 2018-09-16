@@ -45,6 +45,7 @@ class createActViewController: UIViewController {
             }
             else if let user = user {
                 print(user)
+                self.performSegue(withIdentifier: "fromCreateToGroups", sender: nil)
             }
                 }
     
