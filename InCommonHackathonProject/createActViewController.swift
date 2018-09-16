@@ -34,10 +34,6 @@ class createActViewController: UIViewController {
     }
     
     @IBAction func linkTappedz(sender:UITapGestureRecognizer) {
-        
-        
-        
-        
         if username.text != "" {
             
             if email.text != "" {

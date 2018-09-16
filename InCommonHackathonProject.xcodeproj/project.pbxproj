@@ -133,8 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				3D454F2E214D793B0060A5AB /* AppDelegate.swift */,
-				3D454F30214D793B0060A5AB /* loginViewController.swift */,
 				3D454F5E214D842D0060A5AB /* landingPageViewController.swift */,
+				3D454F30214D793B0060A5AB /* loginViewController.swift */,
 				3D454F32214D793B0060A5AB /* createActViewController.swift */,
 				3D9B991B214E527A00AE2EEF /* GoogleService-Info.plist */,
 				3D9B9919214E4D9B00AE2EEF /* GroupsLandingPageViewController.swift */,
