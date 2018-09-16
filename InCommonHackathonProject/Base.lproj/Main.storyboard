@@ -122,7 +122,7 @@
         <!--Login View Controller-->
         <scene sceneID="cb3-yZ-nqs">
             <objects>
-                <viewController id="HbY-rz-yo9" customClass="loginViewController" sceneMemberID="viewController">
+                <viewController id="HbY-rz-yo9" customClass="loginViewController" customModule="InCommonHackathonProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ou-HL-VDU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,6 +170,9 @@
                         <viewLayoutGuide key="safeArea" id="584-3c-tZ9"/>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="kT3-YE-fQL" id="ld6-8W-Mad"/>
+                        <outlet property="loginBttn" destination="D43-yA-VWV" id="o3l-j2-wqf"/>
+                        <outlet property="passwordField" destination="Wc3-0x-6Dv" id="ILm-1G-cCF"/>
                         <segue destination="8Mk-tp-p2r" kind="show" id="5Ti-US-Q8b"/>
                     </connections>
                 </viewController>
@@ -180,7 +183,7 @@
         <!--Create Act View Controller-->
         <scene sceneID="h5w-w7-cbk">
             <objects>
-                <viewController id="eRp-UH-6Bv" customClass="createActViewController" sceneMemberID="viewController">
+                <viewController id="eRp-UH-6Bv" customClass="createActViewController" customModule="InCommonHackathonProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TC-li-oCh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,8 +210,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address (required, hidden)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DwO-dL-kSz">
+                                <rect key="frame" x="67" y="295" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password (we never see this)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KQF-26-8eD">
+                                <rect key="frame" x="67" y="358" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ypc-Rd-evW" customClass="LGButton" customModule="LGButton">
-                                <rect key="frame" x="67" y="538" width="240" height="71"/>
+                                <rect key="frame" x="67" y="452" width="240" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -219,32 +236,15 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address (required, hidden)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DwO-dL-kSz">
-                                <rect key="frame" x="67" y="295" width="240" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number (hidden)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYZ-ev-KVZ">
-                                <rect key="frame" x="67" y="352" width="240" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password (we never see this)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KQF-26-8eD">
-                                <rect key="frame" x="67" y="412" width="240" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="V6s-x0-T00"/>
                     </view>
                     <connections>
+                        <outlet property="button" destination="ypc-Rd-evW" id="uTn-8N-N6o"/>
+                        <outlet property="email" destination="DwO-dL-kSz" id="8N7-IH-Pmr"/>
+                        <outlet property="password" destination="KQF-26-8eD" id="ZYz-mB-ht9"/>
+                        <outlet property="username" destination="AbM-d3-5Yf" id="Lh7-WJ-5Ea"/>
                         <segue destination="8Mk-tp-p2r" kind="show" id="mSs-tX-70f"/>
                     </connections>
                 </viewController>
@@ -255,7 +255,7 @@
         <!--Groups Landing Page View Controller-->
         <scene sceneID="HCR-dw-ENM">
             <objects>
-                <viewController id="8Mk-tp-p2r" customClass="GroupsLandingPageViewController" sceneMemberID="viewController">
+                <viewController id="8Mk-tp-p2r" customClass="GroupsLandingPageViewController" customModule="InCommonHackathonProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="brD-jK-2jl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
