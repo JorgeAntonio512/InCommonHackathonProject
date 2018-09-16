@@ -11,14 +11,22 @@ import UIKit
 import WebKit
 import Firebase
 import FirebaseStorage
+import KMPlaceholderTextView
 
-class topicsLandingPageViewController: UIViewController {
-     
-        var value = ""
+class topicsLandingPageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var leaveAComment: KMPlaceholderTextView!
+    @IBOutlet weak var commentBtn: UIView!
+    
+    @IBOutlet var topiczz: UITextView!
+    var value = ""
         
         override func viewDidLoad() {
             super.viewDidLoad()
-        }
+        print(value + "hey dur")
+    topiczz.text = value
+    }
         
         
 

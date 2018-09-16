@@ -42,7 +42,7 @@ class GroupsLandingPageViewController: UIViewController, UITableViewDelegate, UI
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if(segue.identifier == "toPeoplesProfiles") {
+        if(segue.identifier == "toTopicz") {
             let vc = segue.destination as! topicsLandingPageViewController
             vc.value = topic!
             
