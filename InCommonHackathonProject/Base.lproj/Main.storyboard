@@ -347,9 +347,29 @@
                     <view key="view" contentMode="scaleToFill" id="lV2-N0-qJP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DJ-Qp-zqi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k9u-1w-7za">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sOg-RE-dl4" firstAttribute="trailing" secondItem="2DJ-Qp-zqi" secondAttribute="trailing" id="1ul-6l-KNx"/>
+                            <constraint firstItem="2DJ-Qp-zqi" firstAttribute="leading" secondItem="sOg-RE-dl4" secondAttribute="leading" id="FHC-a7-GOh"/>
+                            <constraint firstItem="sOg-RE-dl4" firstAttribute="bottom" secondItem="2DJ-Qp-zqi" secondAttribute="bottom" id="J9N-io-FIb"/>
+                            <constraint firstItem="2DJ-Qp-zqi" firstAttribute="top" secondItem="sOg-RE-dl4" secondAttribute="top" id="NMZ-0Q-MlM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sOg-RE-dl4"/>
                     </view>
+                    <connections>
+                        <outlet property="groupsList" destination="k9u-1w-7za" id="aIu-I4-7If"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUw-rM-VjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
