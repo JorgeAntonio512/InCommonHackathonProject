@@ -37,6 +37,7 @@ class createAgroupViewController: UIViewController {
     @IBAction func linkzTapz(sender:UITapGestureRecognizer) {
     self.ref.child("groups").child("topics").setValue(["topic": chooseAtopic.text])
         print("great success!")
+        self.performSegue(withIdentifier: "toGroupsView", sender: nil)
     }
     
 }

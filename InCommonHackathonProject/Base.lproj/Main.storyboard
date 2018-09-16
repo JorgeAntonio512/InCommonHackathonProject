@@ -333,11 +333,27 @@
                     <connections>
                         <outlet property="buttonzForDayz" destination="Kse-Wb-Ywz" id="0Es-J0-MZk"/>
                         <outlet property="chooseAtopic" destination="eoL-e5-zKP" id="j0s-sI-vx0"/>
+                        <segue destination="dk9-xV-hHc" kind="show" identifier="toGroupsView" id="gRA-Oo-A7J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p92-Wd-ltM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325.60000000000002" y="340.47976011994007"/>
+        </scene>
+        <!--Groups List View Controller-->
+        <scene sceneID="Xhr-ax-Spm">
+            <objects>
+                <viewController id="dk9-xV-hHc" customClass="GroupsListViewController" customModule="InCommonHackathonProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lV2-N0-qJP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sOg-RE-dl4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUw-rM-VjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308" y="339"/>
         </scene>
     </scenes>
     <resources>
